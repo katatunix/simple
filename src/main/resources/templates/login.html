@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    .errorMsg { color: red; }
+  </style>
+</head>
+<body>
+<h1>Login</h1>
+
+<form method="post" th:action="@{/login}">
+  <table>
+    <tr>
+      <td><label for="username">Username</label></td>
+      <td><input type="text" id="username" name="username" th:value="${username}"/></td>
+    </tr>
+    <tr>
+      <td><label for="password">Password</label></td>
+      <td><input type="password" id="password" name="password" th:value="${password}"/></td>
+    </tr>
+  </table>
+  <input type="submit">
+  <p th:if="${errorMsg}" th:text="${errorMsg}" class="errorMsg"></p>
+</form>
+
+</body>
+</html>

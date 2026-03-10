@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+</head>
+<body>
+<h1>Home</h1>
+<a th:if="${userLoggedIn}" th:href="@{/logout}">Logout</a>
+<a th:unless="${userLoggedIn}" th:href="@{/login}">Login</a>
+</body>
+</html>
