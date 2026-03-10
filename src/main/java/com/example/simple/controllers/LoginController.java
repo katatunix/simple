@@ -21,9 +21,7 @@ public class LoginController {
     }
 
     @GetMapping("/login")
-    public String loginGet(
-            HttpServletRequest request
-    ) {
+    public String loginGet(HttpServletRequest request) {
         if (Utils.isUserLoggedIn(request)) {
             return "redirect:/";
         }
